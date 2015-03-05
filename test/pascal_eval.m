@@ -1,3 +1,7 @@
+% ===================================================================
+% TODO create a new evaluation function to output identical result as pascal_eval.m
+% ===================================================================
+
 function [ap, prec, recall] = pascal_eval(cls, ds, testset, year, suffix)
 % Score detections using the PASCAL development kit.
 %   [ap, prec, recall] = pascal_eval(cls, ds, testset, suffix)
