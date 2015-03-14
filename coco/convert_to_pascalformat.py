@@ -3,6 +3,7 @@
 from pycocotools.coco import COCO
 import os
 
+# directory of where coco annotation locates.
 dataDir='.'
 dataType='val2014'
 annFile='%s/annotations/instances_%s.json'%(dataDir,dataType)
