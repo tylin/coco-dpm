@@ -17,9 +17,6 @@ function ds = pascal_test(model, testset, year, suffix)
 %   We also save the bounding boxes of each filter (include root filters)
 %   and the unclipped detection window in ds
 
-% ===================================================================
-% TODO change the code for loading images for testing
-% ===================================================================
 conf = voc_config('pascal.year', year, ...
                   'eval.test_set', testset);
 VOCopts  = conf.pascal.VOCopts;
@@ -86,10 +83,6 @@ catch
   ds = ds_out;
   bs = bs_out;
 
-% ===================================================================
-% TODO add a different file to save detection result in COCO format
-% TODO The fortmat: {"image_id": int, "category_id": int, "bbox": [x, y, w, h]}
-% ===================================================================
   save([cachedir cls '_boxes_' testset '_' suffix], ...
        'ds', 'bs', 'th');
   fprintf('Testing took %.4f seconds\n', th);

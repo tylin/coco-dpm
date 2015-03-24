@@ -25,9 +25,6 @@ conf = voc_config();
 cachedir = conf.paths.model_dir;
 
 % Load the training data
-% ==================================================================
-% TODO modify pascal_data function
-% ==================================================================
 [pos, neg, impos] = pascal_data(cls, conf.pascal.year);
 
 % Split foreground examples into n groups by aspect ratio
